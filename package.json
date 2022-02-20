@@ -22,7 +22,7 @@
     "jquery": "^3.6.0",
     "minecraft-server-util": "^5.2.8",
     "moment": "^2.29.1",
-    "msmc": "github:Crystal-Development-LLC/msmc",
+    "msmc": "github:Hanro50/msmc",
     "os": "^0.1.2",
     "tailwindcss": "^2.2.19",
     "tailwindscss": "^0.3.0",
