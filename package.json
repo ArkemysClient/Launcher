@@ -1,16 +1,16 @@
 {
-  "name": "crystalclient-launcher",
-  "description": "Crystal Client Launcher",
-  "version": "1.0.1",
+  "name": "arkemysclient",
+  "description": "Arkemys Client",
+  "version": "2.0.0",
   "main": "src/index.js",
-  "author": "BestBearr",
+  "author": "RASTIQ",
   "license": "UNLICENSED",
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder build",
     "dist:win": "npm run dist -- -w",
     "dist:mac": "npm run dist -- -m",
-    "dist:linux": "npm run dist -- -l",
+    "dist:linux": "npm run dist -- -l"
   },
   "engines": {
     "node": "16.x.x"

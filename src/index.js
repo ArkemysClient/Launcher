@@ -1,9 +1,3 @@
-// 
-// Crystal Development, LLC.
-// Crystal Client Launcher
-// Copyright (c) 2020-2022. All rights reserved.
-// 
-
 require('@electron/remote/main').initialize();
 
 const { app, BrowserWindow } = require('electron');
@@ -26,7 +20,7 @@ async function createWindow() {
     let win = new BrowserWindow({
         width: 1280,
         height: 720,
-        icon: require('./constants').ICON,
+        icon: require('./constants.js').ICON,
         frame: false,
         backgroundColor: '#171614',
         webPreferences: {

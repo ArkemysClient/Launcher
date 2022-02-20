@@ -7,7 +7,7 @@ module.exports.ICON = (() => {
     let ext;
     switch (process.platform) {
         case 'win32':
-            ext = 'ico'
+            ext = 'png'
             break
         case 'darwin':
             ext = 'icns';
