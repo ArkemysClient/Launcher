@@ -44,4 +44,8 @@
     "electron": "^16.0.8",
     "electron-builder": "^22.14.13"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArkemysClient/Launcher.git"
+  }
 }
