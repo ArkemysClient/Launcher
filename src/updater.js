@@ -53,7 +53,7 @@ module.exports = class {
             this._progressBar = new ProgressBar({
                 title: 'Mise À Jour',
                 text: 'Téléchargement...',
-                detail: 'Préparation',
+                detail: 'Préparation de la MÀJ.',
                 value: 0,
                 hideCancel: true,
                 browserWindow: {
