@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder build -p onTag",
+    "dist": "electron-builder build -p onTagOrDraft",
     "dist:win": "npm run dist -- -w",
     "dist:mac": "npm run dist -- -m",
     "dist:linux": "npm run dist -- -l"
@@ -46,6 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArkemysClient/Launcher.git"
+    "url": "git+https://github.com/ArkemysClient/launcher-releases.git"
   }
 }
