@@ -46,6 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArkemysClient/Launcher.git"
+    "url": "git+https://github.com/ArkemysClient/launcher-releases.git"
   }
 }
