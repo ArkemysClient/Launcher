@@ -17,7 +17,7 @@ class AssetHandler {
         this.logger = new Logger('AssetHandler', 'magenta');
 
         /** @type {string} */
-        this._version = require('../util/version').CRYSTAL_CLIENT.v1_8;
+        this._version = require('../util/version').ARKEMYS_CLIENT.v1_8;
         /** @type {Object} */
         this._distribution = null;
         /** @type {import("../objects/javaBuild")} */
@@ -55,7 +55,7 @@ class AssetHandler {
      * Ensure assets are up-to-date.
      */
     async validateAssetIntegrity() {
-        setLaunchButtonText('Validating Assets...');
+        setLaunchButtonText('Validation des Assets...');
 
         return new Promise(async res => {
             const mcVersion = this.getDistribution()["version"]["mc_version"];
@@ -132,7 +132,7 @@ class AssetHandler {
      */
     async validateVersionIntegrity() {
         return new Promise(async res => {
-            setLaunchButtonText('Validating Minecraft...');
+            setLaunchButtonText('Validation de Minecraft...');
 
             const mcVersion = this.getDistribution()["version"]["mc_version"];
             const clientVersionJson = this._clientJsonData.get(mcVersion);
@@ -166,7 +166,7 @@ class AssetHandler {
      */
     async validateLibraryIntegrity() {
         return new Promise(async res => {
-            setLaunchButtonText('Validating Libraries...');
+            setLaunchButtonText('Validation des librairies...');
 
             const queue = [];
 

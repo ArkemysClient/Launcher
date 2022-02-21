@@ -12,7 +12,7 @@ const Logger = require('../util/logger').Logger;
 const logger = new Logger('ConfigurationHandler', 'green');
 const sysRoot = process.env.APPDATA || (process.platform === 'darwin' ? process.env.HOME + '/Library/Application Support' : process.env.HOME);
 const mcDataDir = path.join(sysRoot, process.env.APPDATA ? '.minecraft' : 'minecraft');
-const commonDir = path.join(require('user-home'), '.crystaldev');
+const commonDir = path.join(require('user-home'), '.arkemysdev');
 const launcherDataDir = process.env.CONFIG_DIRECT_PATH || require('@electron/remote').app.getPath('userData');
 const launcherConfigFile = path.join(launcherDataDir, 'launcher_config.json');
 
@@ -111,7 +111,7 @@ module.exports = {
 
         // version is not a valid version, resort to using 1.8 Crystal Client.
         if (!found) {
-            self.getConfig().version = version.CRYSTAL_CLIENT.v1_8;
+            self.getConfig().version = version.ARKEMYS_CLIENT.v1_8;
             self.saveConfig();
             if (getMcVersion)
                 ver = 'v1_8';

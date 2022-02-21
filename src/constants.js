@@ -1,8 +1,8 @@
 const path = require('path');
 
-module.exports.NAME = 'Crystal Client Launcher';
+module.exports.NAME = 'Arkemys Client';
 module.exports.VERSION = require(path.join(__dirname, '../package.json')).version;
-module.exports.LIBRARIES_ROOT_URL = 'https://libraries.crystalclient.net';
+module.exports.LIBRARIES_ROOT_URL = 'https://arkemys.tk/cdn/libraries';
 module.exports.ICON = (() => {
     let ext;
     switch (process.platform) {

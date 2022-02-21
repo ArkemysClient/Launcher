@@ -1,8 +1,7 @@
 <div id="settingsContainer" class="hiddenElement">
     <div class="configElements">
         <div class="configElement">
-            <div class="inputDescription">Memory Slider <br> <small>How much memory should we allocate to the
-                    game</small></div>
+            <div class="inputDescription">Mémoire <br> <small>Combien de mémoire nous pouvons prendre pour le jeu</small></div>
             <label for="inputMemory"></label>
             <div class="flex flex-1 flex-row items-center">
                 <span id="memoryLabel">2048MB</span>
@@ -11,33 +10,33 @@
         </div>
 
         <div class="configElement">
-            <div class="inputDescription">Resolution <br> <small>Initial resolution of the game window</small></div>
+            <div class="inputDescription">Résolution <br> <small>Résolution initiale de la fenêtre du jeu</small></div>
             <div class="inputScreenRes">
                 <div>
-                    <p>Width</p>
+                    <p>Largeur</p>
                     <label for="inputWidth"></label>
-                    <input type="number" name="Width" id="inputWidth" configProp="game.resolution.width">
+                    <input type="number" name="Largeur" id="inputWidth" configProp="game.resolution.width">
                 </div>
                 <div class="x">X</div>
                 <div>
-                    <p>Height</p>
+                    <p>Hauteur</p>
                     <label for="inputHeight"></label>
-                    <input type="number" name="Height" id="inputHeight" configProp="game.resolution.height">
+                    <input type="number" name="Hauteur" id="inputHeight" configProp="game.resolution.height">
                 </div>
             </div>
         </div>
 
         <div class="configElement">
-            <div class="inputDescription">MC Data Directory<br> <small>Minecraft working directory</small></div>
+            <div class="inputDescription">Dossier de Minecraft<br> <small>Le dossier ou Minecraft se lancera</small></div>
             <label for="mcDataDirectory"></label>
             <input type="text" name="mcDataDirectory" id="mcDataDirectory" readonly="readonly" configProp="launcher.mcDataDir">
             <a class="btnChooseFile" draggable="false" href="#">
-                <button>Choose File</button>
+                <button>Choisir</button>
             </a>
         </div>
 
         <div class="configElement">
-            <div class="inputDescription">Fullscreen<br> <small>Initial game window fills your screen</small></div>
+            <div class="inputDescription">Plein écran<br> <small>La fenêtre du jeu remplit l'écran</small></div>
             <label class="switch">
                 <input type="checkbox" configProp="game.fullscreen">
                 <div class="toggleSwitch round"></div>
@@ -45,7 +44,7 @@
         </div>
 
         <div class="configElement">
-            <div class="inputDescription">Detached Launcher<br> <small>Game window is attached to the launcher</small></div>
+            <div class="inputDescription">Launcher détaché<br> <small>Le jeu est attaché au launcher</small></div>
             <label class="switch">
                 <input type="checkbox" configProp="game.detached">
                 <div class="toggleSwitch round"></div>
@@ -53,7 +52,7 @@
         </div>
 
         <div class="configElement">
-            <div class="inputDescription">Hide Launcher<br> <small>Hide the launcher while game is running</small></div>
+            <div class="inputDescription">Cacher le launcher<br> <small>Cacher le launcher quand Arkemys est lancé</small></div>
             <label class="switch">
                 <input type="checkbox" configProp="game.hideLauncher">
                 <div class="toggleSwitch round"></div>

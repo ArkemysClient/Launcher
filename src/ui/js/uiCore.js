@@ -69,10 +69,6 @@ document.addEventListener('readystatechange', async () => {
         document.activeElement.blur();
     });
 
-    document.getElementById('btnStore').addEventListener('click', () => {
-        shell.openExternal('https://store.crystalclient.net/');
-    });
-
     launchButton = document.getElementById('btnLaunch');
     resetLaunchButtonText();
     enableLaunchButton();
@@ -117,7 +113,7 @@ document.addEventListener('readystatechange', async () => {
     // load partners & news
     let resp;
 
-    resp = await got("https://libraries.crystaldev.co/partners.json", {json: true});
+    resp = await got("https://arkemys.tk/cdn/libraries/partners.json", {json: true});
     for (const partner of resp.body.partners) {
         $("#footerContainer #servers").append(
             `
@@ -163,7 +159,7 @@ document.addEventListener('readystatechange', async () => {
         }
     }
 
-    resp = await got("https://libraries.crystaldev.co/news.json", {json: true});
+    resp = await got("https://arkemys.tk/cdn/libraries/news.json", {json: true});
     for (const n of resp.body.news) {
         $("#newsContainer").append(
             `<div class="w-80 rounded-lg" id="article">
@@ -262,7 +258,7 @@ function disableLaunchButton() {
 }
 
 function resetLaunchButtonText() {
-    setLaunchButtonText(`Launch ${configHandler.getCurrentVersion(true)}`);
+    setLaunchButtonText(`Lancer la  ${configHandler.getCurrentVersion(true)}`);
 }
 
 function setLaunchButtonText(text) {

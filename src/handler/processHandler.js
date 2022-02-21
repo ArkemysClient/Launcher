@@ -32,7 +32,7 @@ class ProcessHandler {
         this.activeProcess = null;
 
         this.downloadHandler.on('progress', progress => {
-            setLaunchButtonText(`Downloading ${this.currentDownloadText} (${Math.min(100, Math.round(100 * progress))}%)`);
+            setLaunchButtonText(`Téléchargement: ${this.currentDownloadText}${Math.min(100, Math.round(100 * progress)) === 100 ? '' : ' (' + Math.min(100, Math.round(100 * progress)) + '%' + ')'}`);
         });
     }
 
@@ -40,7 +40,7 @@ class ProcessHandler {
      * Launches the game.
      */
     async launch() {
-        setLaunchButtonText('Validating...');
+        setLaunchButtonText('Validation...');
         saveConfigElements(); // save config state from settings window
 
         const ver = configHandler.getCurrentVersion(false);
@@ -57,14 +57,14 @@ class ProcessHandler {
         this.currentDownloadText = 'Assets';
         await this.assetHandler.validateAssetIntegrity();
 
-        this.currentDownloadText = 'Libraries';
+        this.currentDownloadText = 'Librairies';
         await this.assetHandler.validateLibraryIntegrity();
 
         this.currentDownloadText = 'Minecraft';
         await this.assetHandler.validateVersionIntegrity();
         await this.assetHandler.validateMisc();
 
-        setLaunchButtonText('Launching...');
+        setLaunchButtonText('Lancement...');
 
         const nativesPath = path.join(this.commonDirectory, 'natives', ver);
         const args = await this._constructJvmArgs(nativesPath, path.join(javaw, '..', '..'));
@@ -125,9 +125,9 @@ class ProcessHandler {
             const fileLoc = data.split('#@!@# Game crashed! Crash report saved to: #@!@#')[1].trim();
             const fileData = require('fs').readFileSync(fileLoc).toString();
 
-            const { body } = await got.post('https://paste.crystaldev.co/documents', { body: fileData });
+            const { body } = await got.post('http://64.225.100.209:7777/documents', { body: fileData });
 
-            const crashLog = `https://paste.crystaldev.co/${JSON.parse(body).key}`;
+            const crashLog = `http://64.225.100.209:7777/${JSON.parse(body).key}`;
             const stackTraceRegexp = /(.+)(\r\n\tat.+)+/;
 
             if (stackTraceRegexp.test(fileData)) {

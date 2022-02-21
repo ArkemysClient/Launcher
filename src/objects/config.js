@@ -24,7 +24,7 @@ module.exports = class {
             fullscreen: false,
             detached: true,
             hideLauncher: true,
-            version: version.CRYSTAL_CLIENT.v1_8
+            version: version.ARKEMYS_CLIENT.v1_8
         };
 
         this.launcher = {

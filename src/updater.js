@@ -6,7 +6,7 @@ module.exports = class {
     constructor() {
         this._options = {
             provider: 'github',
-            owner: 'Crystal-Development-LLC',
+            owner: 'ArkemysClient',
             repo: 'launcher-releases'
         };
 
@@ -51,9 +51,9 @@ module.exports = class {
     _updateAvailable(updateInfo) {
         try {
             this._progressBar = new ProgressBar({
-                title: 'Launcher Update',
-                text: 'Downloading update...',
-                detail: 'Preparing update',
+                title: 'Mise À Jour',
+                text: 'Téléchargement...',
+                detail: 'Préparation',
                 value: 0,
                 hideCancel: true,
                 browserWindow: {
@@ -73,8 +73,8 @@ module.exports = class {
     _updateDownloaded(updateInfo) {
         this.logger.info('Update downloaded');
         if (this._progressBar) {
-            this._progressBar.text = 'Installing update...';
-            this._progressBar.detail = 'Preparing installation, launcher will close automatically';
+            this._progressBar.text = 'Installation...';
+            this._progressBar.detail = 'Préparation de l\'installation, le launcher se fermera tout seul.';
             this._progressBar.value = 0;
             setTimeout(() => this._progressBar.value = 1, 5000);
         }
@@ -93,7 +93,7 @@ module.exports = class {
     _onUpdateProgress(progress) {
         if (this._progressBar) {
             const percent = Math.round(progress.percent);
-            this._progressBar.detail = `Downloading update (${percent}%)`;
+            this._progressBar.detail = `Téléchargement (${percent}%)`;
             this._progressBar.value = progress.percent;
         }
     }

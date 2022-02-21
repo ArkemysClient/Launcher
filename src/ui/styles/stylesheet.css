@@ -121,26 +121,6 @@ body {
     cursor: default;
 }
 
-#navigationBar #btnStore {
-    margin-right: 4%;
-
-    padding: 7px 26px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-
-    background-color: rgba(7, 144, 242, 0.6);
-    transition: all 250ms ease-in-out;
-
-    color: white;
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-}
-
-#navigationBar #btnStore:hover {
-    background-color: rgb(7, 144, 242);
-}
-
 #navigationBar nav {
     cursor: default;
     flex: 1;
@@ -276,7 +256,7 @@ body {
     height: 55px;
 
     border-radius: 16px;
-    border: 3px solid rgba(7, 144, 242, 0.8);
+    border: 3px solid rgba(255,223,0, 0.8);
     background: rgba(33, 33, 33, 0.6);
 
     margin: auto auto 2%;
@@ -294,8 +274,8 @@ body {
 }
 
 #footerContainer #btnLaunch:hover {
-    border: 3px solid rgb(7, 144, 242);
-    box-shadow: rgba(7, 144, 242, 0.67) 0 0 11px;
+    border: 3px solid rgb(255,223,0);
+    box-shadow: rgba(255, 223, 0, 0.67) 0 0 11px;
 }
 
 #footerContainer #btnLaunch:disabled {
@@ -322,13 +302,13 @@ body {
     background-color: rgb(33, 33, 33);
     border-radius: 14px;
     box-shadow: rgba(14, 14, 14, 0.2) 0 0 4px;
-    background-color: rgba(0, 33, 57, 0.6);
+    background-color: rgba(248, 200, 0, 0.6);
 }
 
 #footerContainer #servers a:hover {
     opacity: 1.0;
     box-shadow: rgb(28, 28, 28) 0 0 15px;
-    background-color: rgb(0, 33, 57);
+    background-color: rgb(178, 142, 0);
     transform: scale(1.05);
 }
 
@@ -510,7 +490,7 @@ body {
     border-radius: 9px;
     cursor: pointer;
 
-    background-color: rgba(7, 144, 242, 0.6);
+    background-color: rgba(255, 255, 0, 0.65);
     transition: all 250ms ease-in-out;
 
     color: white;
@@ -519,7 +499,7 @@ body {
 }
 
 .btnChooseFile:hover {
-    background-color: rgb(7, 144, 242);
+    background-color: rgb(211, 180, 16);
 }
 
 .inputDescription small {
@@ -613,11 +593,11 @@ body {
 }
 
 input:checked + .toggleSwitch {
-    background-color: rgb(7, 144, 242);
+    background-color: rgb(50,205,50);
 }
 
 input:focus + .toggleSwitch {
-    box-shadow: 0 0 1px rgb(33, 150, 243);
+    box-shadow: 0 0 1px rgb(76,211,51);
 }
 
 input:checked + .toggleSwitch:before {
